@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { getLandingContent } from "@/content/getLandingContent";
 import type { Locale } from "./types";
+import { MobileNav } from "./MobileNav";
 
 type Props = { locale: Locale };
 
@@ -53,6 +54,7 @@ export function Navbar({ locale }: Props) {
           >
             {navbar.ctaLabel}
           </Link>
+          <MobileNav />
         </div>
       </div>
     </header>
