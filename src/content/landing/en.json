@@ -1,0 +1,122 @@
+{
+  "navbar": {
+    "nav": [
+      { "href": "/", "label": "Home" },
+      { "href": "/product", "label": "Product" },
+      { "href": "/case-studies", "label": "Case Studies" },
+      { "href": "/pricing", "label": "Pricing" },
+      { "href": "/demo", "label": "Demo" }
+    ],
+    "ctaLabel": "Contact Us",
+    "langSwitchLabel": "中文"
+  },
+  "hero": {
+    "title": ["Simpler clinic operations"],
+    "subtitle": [
+      "Avenra integrates scheduling, customer CRM, electronic records and analytics to help clinics work more efficiently and grow revenue."
+    ],
+    "primaryBtn": "Contact Us",
+    "secondaryBtn": "Join LINE",
+    "benefits": ["Smart scheduling", "Customer CRM", "Electronic records", "Operations analytics"]
+  },
+  "heroPreview": {
+    "patientsLabel": "Today",
+    "doctorCol1": "Dr. Wang",
+    "doctorCol2": "Dr. Lee",
+    "timeLabels": ["09:00", "10:00", "11:00", "12:00", "14:00"],
+    "patientNames": ["Patient A", "Patient B", "Patient C", "Patient D", "Patient E"],
+    "selectedTime": "10:30",
+    "dateLabel": "Mar 15",
+    "todayLabel": "Today",
+    "consultLabel": "Consult",
+    "treatmentLabel": "Treatment",
+    "analyticsTodayLabel": "Today",
+    "analyticsDoneLabel": "Done",
+    "analyticsPendingLabel": "Pending"
+  },
+  "trustStrip": {
+    "items": [
+      "Appointments",
+      "Customer CRM",
+      "Treatment Records",
+      "Before / After",
+      "Analytics",
+      "LINE Integration"
+    ]
+  },
+  "painPoints": {
+    "title": ["Common clinic management gaps—", "no more scattered tools"],
+    "items": [
+      "Appointments and schedules in chaos",
+      "Customer data scattered",
+      "Treatment records and photos hard to manage",
+      "No real-time operations data"
+    ]
+  },
+  "solution": {
+    "title": "One platform for your clinic's key workflows",
+    "body": "Avenra brings appointments, CRM, treatment records, photo management, and operations analytics into one place—so your team can run consistent, scalable workflows.",
+    "features": [
+      { "title": "Smart scheduling", "desc": "Staff schedules, availability, and booking in one place" },
+      { "title": "Customer CRM", "desc": "Customer data, visits, and treatment history centralized" },
+      { "title": "Before / After photos", "desc": "Treatment photos and cases stored and managed securely" },
+      { "title": "Operations dashboard", "desc": "Metrics and performance trends visualized" }
+    ]
+  },
+  "coreFeatures": {
+    "sectionTitle": "Core features",
+    "features": [
+      { "title": "Smart scheduling", "desc": "Manage staff schedules, availability, and booking flow" },
+      { "title": "Customer CRM", "desc": "Centralize customer data, visits, and treatment history" },
+      { "title": "Before / After photos", "desc": "Securely store and manage treatment photos and cases" },
+      { "title": "Operations dashboard", "desc": "Visualize clinic metrics and performance trends" }
+    ]
+  },
+  "productScreenshots": {
+    "title": "From daily ops to business view—all in one place",
+    "cards": [
+      { "label": "Scheduling" },
+      { "label": "Customer CRM" },
+      { "label": "Analytics" }
+    ],
+    "mockDoctorLabels": ["Dr. A", "Dr. B", "Dr. C"],
+    "mockBookingLabel": "Booking",
+    "mockTodayLabel": "Today",
+    "mockDoneLabel": "Done"
+  },
+  "howItWorks": {
+    "title": "From onboarding to daily ops—a clearer workflow",
+    "steps": ["Set up your clinic", "Manage appointments & customers", "Track operations data"]
+  },
+  "integrations": {
+    "title": "Integrate with your existing workflow",
+    "names": ["LINE", "Google Calendar", "Payment", "API Ready"]
+  },
+  "pricing": {
+    "title": "Flexible plans with room to grow",
+    "starter": "Starter",
+    "growth": "Growth",
+    "enterprise": "Enterprise",
+    "starterDesc": "For single-location clinics",
+    "growthDesc": "For growing clinics",
+    "enterpriseDesc": "Multi-location & custom workflows",
+    "cta": "Contact Us",
+    "contactUs": "Contact Us"
+  },
+  "finalCta": {
+    "title": "Ready to run your clinic more efficiently?",
+    "primary": "Contact Us",
+    "secondary": "Join LINE"
+  },
+  "footer": {
+    "product": "Product",
+    "solutions": "Solutions",
+    "pricing": "Pricing",
+    "caseStudies": "Case Studies",
+    "contact": "Contact",
+    "email": "Email",
+    "line": "LINE",
+    "copyright": "All rights reserved.",
+    "langLabel": "中文"
+  }
+}

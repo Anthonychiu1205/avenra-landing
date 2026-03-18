@@ -1,0 +1,371 @@
+@import "tailwindcss";
+
+:root {
+  --bg-0: #f6f8f7;
+  --bg-1: #e2ece7;
+  --bg-2: #ffffff;
+  --card: rgba(255, 255, 255, 0.88);
+  --line: #d6ded9;
+  --text: #123129;
+  --muted: #4f6b61;
+  --brand: #0f766e;
+  --brand-strong: #115e59;
+  --danger: #b9381b;
+}
+
+@theme inline {
+  --color-background: var(--bg-0);
+  --color-foreground: var(--text);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  color: var(--text);
+  background: #ffffff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input,
+select,
+textarea,
+button {
+  font: inherit;
+}
+
+@media (max-width: 767px) {
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+}
+
+.app-panel {
+  border: 1px solid var(--line);
+  background: var(--card);
+  backdrop-filter: blur(6px);
+  overflow: visible;
+}
+
+.settings-manager .grid > * {
+  min-width: 0;
+}
+
+.settings-manager input,
+.settings-manager select,
+.settings-manager textarea {
+  max-width: 100%;
+}
+
+.settings-manager .text-slate-700,
+.settings-manager .text-slate-800,
+.settings-manager .text-slate-500 {
+  overflow-wrap: anywhere;
+}
+
+.fade-in {
+  animation: fade-in 320ms ease-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes hero-mockup-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.animate-hero-mockup-float {
+  animation: hero-mockup-float 5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-hero-mockup-float {
+    animation: none;
+  }
+}
+
+/* Hero dashboard: schedule block appear (Step 1) — real-time update feel */
+@keyframes hero-schedule-block-appear {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hero dashboard: KPI badge appear (Step 2) */
+@keyframes hero-kpi-badge-appear {
+  from {
+    opacity: 0;
+    transform: scale(0.92) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Hero dashboard: KPI overlay badges — subtle floating (results layer) */
+@keyframes hero-kpi-badge-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+.hero-kpi-badge-float {
+  animation: hero-kpi-badge-float 4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-kpi-badge-float {
+    animation: none;
+  }
+}
+
+/* Hero dashboard: idle float after sequence completes (Step 4) */
+@keyframes hero-dashboard-idle-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.hero-dashboard-idle-float {
+  animation: hero-dashboard-idle-float 3.5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-dashboard-idle-float {
+    animation: none;
+  }
+}
+
+/* Site-wide hover standards: cards and buttons */
+.site-card-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.site-card-hover:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px -4px rgb(0 0 0 / 0.1), 0 4px 8px -2px rgb(0 0 0 / 0.08);
+}
+
+.site-btn-transition {
+  transition: background-color 0.2s ease-out, border-color 0.2s ease-out, color 0.2s ease-out, transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+.site-cta-btn:focus-visible {
+  outline: none;
+}
+.site-cta-btn.cta-primary:focus-visible {
+  box-shadow:
+    0 4px 12px -2px rgb(20 184 166 / 0.35),
+    0 0 0 2px #ffffff,
+    0 0 0 4px rgb(20 184 166 / 0.55);
+}
+.site-cta-btn:not(.cta-primary):focus-visible {
+  box-shadow:
+    0 4px 12px -2px rgb(0 0 0 / 0.10),
+    0 0 0 2px #ffffff,
+    0 0 0 4px rgb(148 163 184 / 0.75);
+}
+.site-cta-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px -2px rgb(0 0 0 / 0.12);
+}
+.site-cta-btn:active {
+  transform: scale(0.97);
+  transition-duration: 0.1s;
+}
+.site-cta-btn.cta-primary:hover {
+  box-shadow: 0 4px 12px -2px rgb(20 184 166 / 0.35);
+}
+
+/* Premium 3D-style showcase (no WebGL, transform-only motion) */
+.showcase-3d {
+  perspective: 900px;
+}
+.showcase-3d-layer {
+  transform-style: preserve-3d;
+}
+.showcase-3d-card {
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  box-shadow:
+    0 24px 50px rgba(15, 23, 42, 0.10),
+    0 10px 18px rgba(15, 23, 42, 0.06);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+.showcase-3d-float {
+  animation: showcase-float 6.5s ease-in-out infinite;
+  will-change: transform;
+}
+.showcase-3d-float-slow {
+  animation: showcase-float 8.5s ease-in-out infinite;
+  will-change: transform;
+}
+@keyframes showcase-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -6px, 0);
+  }
+}
+.showcase-badge-float {
+  animation: badge-float 5.8s ease-in-out infinite;
+  will-change: transform;
+}
+@keyframes badge-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -4px, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .showcase-3d-float,
+  .showcase-3d-float-slow,
+  .showcase-badge-float {
+    animation: none;
+  }
+}
+
+/* Removed node/particle background to keep theme clean */
+
+/* Data-driven section activity animations (transform/opacity only) */
+.kpi-count {
+  font-variant-numeric: tabular-nums;
+}
+.kpi-pop {
+  opacity: 0;
+  transform: translate3d(0, 6px, 0);
+  transition: transform 420ms ease-out, opacity 420ms ease-out;
+}
+.kpi-pop.is-on {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.schedule-appear {
+  opacity: 0;
+  transform: translate3d(0, 6px, 0) scale(0.98);
+  transition: transform 420ms ease-out, opacity 420ms ease-out;
+}
+.schedule-appear.is-on {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+.line-draw {
+  stroke-dasharray: var(--dash, 260);
+  stroke-dashoffset: var(--dash, 260);
+  transition: stroke-dashoffset 1100ms ease-out;
+}
+.line-draw.is-on {
+  stroke-dashoffset: 0;
+}
+
+.parallax-tilt {
+  transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  transition: transform 220ms ease-out;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kpi-pop,
+  .schedule-appear,
+  .line-draw,
+  .parallax-tilt {
+    transition: none;
+    transform: none !important;
+    opacity: 1 !important;
+    stroke-dashoffset: 0 !important;
+  }
+}
+
+/* Product demo: subtle card shine (runs every ~6s) */
+@keyframes card-shine {
+  0% { transform: translateX(-100%) skewX(-12deg); }
+  8% { transform: translateX(100%) skewX(-12deg); }
+  100% { transform: translateX(100%) skewX(-12deg); }
+}
+
+.product-demo-card-shine {
+  animation: card-shine 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .product-demo-card-shine {
+    animation: none;
+  }
+}
+
+/* Product demo: very subtle floating particles */
+@keyframes demo-particle-float {
+  0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.04; }
+  33% { transform: translate(4px, -6px) scale(1.02); opacity: 0.06; }
+  66% { transform: translate(-3px, 2px) scale(0.98); opacity: 0.03; }
+}
+
+.product-demo-particle {
+  animation: demo-particle-float 8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .product-demo-particle {
+    animation: none;
+  }
+}

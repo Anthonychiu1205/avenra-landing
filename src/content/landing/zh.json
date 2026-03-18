@@ -1,0 +1,123 @@
+{
+  "navbar": {
+    "nav": [
+      { "href": "/", "label": "首頁" },
+      { "href": "/product", "label": "產品" },
+      { "href": "/case-studies", "label": "客戶案例" },
+      { "href": "/pricing", "label": "價格" },
+      { "href": "/demo", "label": "Demo" }
+    ],
+    "ctaLabel": "聯絡我們",
+    "langSwitchLabel": "EN"
+  },
+  "hero": {
+    "title": ["讓診所營運更簡單"],
+    "subtitle": [
+      "Avenra 整合預約、客戶資料與營運流程，讓診所運作更清楚，效率提升更可預期。"
+    ],
+    "supportingLine": "多數診所在導入後 30 天內，即可明顯改善預約與回診流程",
+    "primaryBtn": "免費預約 Demo",
+    "secondaryBtn": "了解更多",
+    "benefits": ["智慧排程管理", "顧客 CRM", "電子病歷", "營運數據分析"]
+  },
+  "heroPreview": {
+    "patientsLabel": "今日預約名單",
+    "doctorCol1": "王醫師",
+    "doctorCol2": "李醫師",
+    "timeLabels": ["09:00", "10:00", "11:00", "12:00", "14:00"],
+    "patientNames": ["林小姐", "陳先生", "張小姐", "黃先生", "吳小姐"],
+    "selectedTime": "10:30",
+    "dateLabel": "3 月 15 日",
+    "todayLabel": "本日",
+    "consultLabel": "諮詢",
+    "treatmentLabel": "療程",
+    "analyticsTodayLabel": "今日預約",
+    "analyticsDoneLabel": "已完成",
+    "analyticsPendingLabel": "待診"
+  },
+  "trustStrip": {
+    "items": [
+      "預約管理",
+      "顧客 CRM",
+      "療程紀錄",
+      "Before / After 管理",
+      "營運分析",
+      "LINE 整合"
+    ]
+  },
+  "painPoints": {
+    "title": ["診所管理常見的斷點，", "不該再靠零散工具硬撐"],
+    "items": [
+      "預約與排班混亂",
+      "顧客資料分散",
+      "療程紀錄與照片難管理",
+      "缺乏即時營運數據"
+    ]
+  },
+  "solution": {
+    "title": "用一個平台整合診所的關鍵流程",
+    "body": "Avenra 將預約、CRM、療程紀錄、照片管理與營運分析集中於同一平台，協助團隊建立更一致、更可擴充的作業流程。",
+    "features": [
+      { "title": "智慧預約排程", "desc": "醫師排班、可預約時段與預約流程一站管理" },
+      { "title": "顧客 CRM 管理", "desc": "顧客資料、到診紀錄與療程歷史集中管理" },
+      { "title": "Before / After 照片管理", "desc": "療程照片與案例內容安全儲存與管理" },
+      { "title": "營運分析儀表板", "desc": "營運數據與績效變化可視化追蹤" }
+    ]
+  },
+  "coreFeatures": {
+    "sectionTitle": "核心功能",
+    "features": [
+      { "title": "智慧預約排程", "desc": "管理醫師排班、可預約時段與預約流程" },
+      { "title": "顧客 CRM 管理", "desc": "集中管理顧客資料、到診紀錄與療程歷史" },
+      { "title": "Before / After 照片管理", "desc": "安全管理療程照片與案例內容" },
+      { "title": "營運分析儀表板", "desc": "可視化追蹤診所營運數據與績效變化" }
+    ]
+  },
+  "productScreenshots": {
+    "title": "從日常操作到營運視角，一站式掌握",
+    "cards": [
+      { "label": "預約排程介面" },
+      { "label": "顧客 CRM" },
+      { "label": "營運分析" }
+    ],
+    "mockDoctorLabels": ["醫師 A", "醫師 B", "醫師 C"],
+    "mockBookingLabel": "預約",
+    "mockTodayLabel": "今日預約",
+    "mockDoneLabel": "已完成"
+  },
+  "howItWorks": {
+    "title": "從導入到日常營運，更直覺的工作流程",
+    "steps": ["建立診所設定", "管理預約與顧客", "追蹤營運數據"]
+  },
+  "integrations": {
+    "title": "保留與既有流程整合的彈性",
+    "names": ["LINE", "Google Calendar", "Payment", "API Ready"]
+  },
+  "pricing": {
+    "title": "彈性方案，保留擴充空間",
+    "starter": "Starter",
+    "growth": "Growth",
+    "enterprise": "Enterprise",
+    "starterDesc": "適合單店診所",
+    "growthDesc": "適合成長型診所",
+    "enterpriseDesc": "適合多分店與客製流程",
+    "cta": "聯絡我們",
+    "contactUs": "聯絡我們"
+  },
+  "finalCta": {
+    "title": "準備好讓診所管理更有效率？",
+    "primary": "聯絡我們",
+    "secondary": "加入 LINE 諮詢"
+  },
+  "footer": {
+    "product": "產品",
+    "solutions": "方案",
+    "pricing": "價格",
+    "caseStudies": "客戶案例",
+    "contact": "聯絡我們",
+    "email": "信箱",
+    "line": "LINE",
+    "copyright": "版權所有",
+    "langLabel": "EN"
+  }
+}
