@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://yourdomain.com";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://avenra.health/";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -41,12 +41,26 @@ export default function RootLayout({
         "@type": "Organization",
         name: "Avenra",
         url: SITE_URL,
-        logo: `${SITE_URL}/logo/avenra-logo.svg`,
+        logo: `${SITE_URL}logo/avenra-logo.svg`,
       },
       {
         "@type": "WebSite",
         name: "Avenra",
         url: SITE_URL,
+      },
+      {
+        "@type": "SoftwareApplication",
+        name: "Avenra",
+        applicationCategory: "BusinessApplication",
+        operatingSystem: "Web",
+        url: "https://avenra.health/",
+        description:
+          "Avenra 是一套為診所設計的 CRM 與預約管理系統，整合排程、回診追蹤與營運數據分析。",
+        publisher: {
+          "@type": "Organization",
+          name: "Avenra",
+          url: "https://avenra.health/",
+        },
       },
     ],
   };
