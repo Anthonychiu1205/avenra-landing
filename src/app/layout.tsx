@@ -4,10 +4,18 @@ import "./globals.css";
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://avenra.health/";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(SITE_URL),
-  title: "Avenra | 診所 CRM 與預約管理平台",
+  metadataBase: new URL("https://avenra.health"),
+  title: "診所CRM預約管理系統｜Avenra",
   description:
-    "專為現代診所打造的 CRM 與預約管理平台，整合預約排程、顧客資料、療程紀錄與營運分析。",
+    "專為各類診所設計的 CRM 與預約管理系統，整合顧客資料、療程紀錄與回診流程，讓營運更清晰、回診穩定成長。",
+  alternates: {
+    canonical: "https://avenra.health",
+  },
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
   openGraph: {
     type: "website",
     siteName: "Avenra",
@@ -41,7 +49,7 @@ export default function RootLayout({
         "@type": "Organization",
         name: "Avenra",
         url: SITE_URL,
-        logo: `${SITE_URL}logo/avenra-logo.svg`,
+        logo: "https://avenra.health/images/logo-search.png",
       },
       {
         "@type": "WebSite",

@@ -109,7 +109,7 @@ export function KpiSection() {
   return (
     <section
       ref={sectionRef}
-      className="border-t border-slate-200 bg-white px-4 py-20 sm:px-6 sm:py-24 lg:px-8 lg:py-28"
+      className="border-t border-slate-200 bg-white px-4 py-12 sm:px-6 sm:py-14 lg:px-8 lg:py-16"
       aria-label="導入後的實際營運提升"
     >
       <div className="mx-auto max-w-6xl">

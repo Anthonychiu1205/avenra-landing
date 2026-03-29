@@ -24,7 +24,7 @@ const CARDS = [
 
 export function CoreValueSection() {
   return (
-    <section className="border-t border-slate-200 bg-gray-50 px-4 py-20 sm:px-6 sm:py-24 lg:px-8 lg:py-28">
+    <section className="relative overflow-hidden rounded-t-[64px] bg-[#f7f7f7] -mt-12 px-4 pt-24 pb-20 sm:px-6 sm:pt-24 sm:pb-20 lg:px-8 lg:pt-24 lg:pb-24">
       <div className="mx-auto max-w-6xl">
         <ScrollReveal>
           <h2 className="text-center text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">

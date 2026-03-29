@@ -5,7 +5,8 @@
       { "href": "/product", "label": "產品" },
       { "href": "/case-studies", "label": "客戶案例" },
       { "href": "/pricing", "label": "價格" },
-      { "href": "/demo", "label": "Demo" }
+      { "href": "/demo", "label": "Demo" },
+      { "href": "/blog", "label": "知識專欄" }
     ],
     "ctaLabel": "聯絡我們",
     "langSwitchLabel": "EN"

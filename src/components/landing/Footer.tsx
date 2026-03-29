@@ -51,7 +51,7 @@ export function Footer({ locale }: Props) {
                   使用條款
                 </Link>
                 <Link href="/blog" className="transition hover:text-slate-700">
-                  診所經營專欄
+                  知識專欄
                 </Link>
               </div>
 

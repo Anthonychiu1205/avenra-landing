@@ -8,7 +8,6 @@ type Props = { locale: Locale };
 
 export function Navbar({ locale }: Props) {
   const { navbar } = getLandingContent(locale);
-  const otherHref = locale === "zh" ? "/en" : "/";
 
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur-md">
@@ -41,13 +40,6 @@ export function Navbar({ locale }: Props) {
         </nav>
 
         <div className="flex items-center gap-4">
-          <Link
-            href={otherHref}
-            className="text-sm font-medium text-slate-500 transition hover:text-slate-700"
-            aria-label={locale === "zh" ? "Switch to English" : "切換至中文"}
-          >
-            {navbar.langSwitchLabel}
-          </Link>
           <Link
             href="/contact"
             className="rounded-lg bg-teal-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-teal-700"
