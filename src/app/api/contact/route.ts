@@ -58,6 +58,12 @@ export async function GET() {
 
 export async function POST(request: Request) {
   console.log("[api/contact] request received");
+  console.log("[api/contact] deployment runtime", {
+    hasWebhookUrl: Boolean(process.env.CONTACT_WEBHOOK_URL),
+    vercelEnv: process.env.VERCEL_ENV ?? null,
+    vercelUrl: process.env.VERCEL_URL ?? null,
+    nodeEnv: process.env.NODE_ENV ?? null,
+  });
 
   let parsedBody: unknown;
   try {
@@ -94,7 +100,14 @@ export async function POST(request: Request) {
   if (!webhookUrl) {
     console.error("[api/contact] missing required env CONTACT_WEBHOOK_URL");
     return NextResponse.json(
-      { success: false, error: "伺服器尚未完成表單設定（CONTACT_WEBHOOK_URL）" },
+      {
+        success: false,
+        error: "伺服器尚未完成表單設定（CONTACT_WEBHOOK_URL）",
+        debug: {
+          vercelEnv: process.env.VERCEL_ENV ?? null,
+          vercelUrl: process.env.VERCEL_URL ?? null,
+        },
+      },
       { status: 500 },
     );
   }
