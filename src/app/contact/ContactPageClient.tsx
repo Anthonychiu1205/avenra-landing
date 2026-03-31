@@ -53,20 +53,34 @@ export function ContactPageClient() {
     setErrorMessage("");
 
     try {
-      const res = await fetch("/api/contact", {
+      console.log("[contact] submitting payload", payload);
+      const contactApiUrl = new URL("/api/contact", window.location.origin).href;
+      const res = await fetch(contactApiUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
-      const data = (await res.json().catch(() => ({}))) as { error?: string };
+      const rawText = await res.text().catch(() => "");
+      let data: { success?: boolean; message?: string; error?: string } = {};
+      if (rawText) {
+        try {
+          data = JSON.parse(rawText) as { success?: boolean; message?: string; error?: string };
+        } catch {
+          data = { error: rawText };
+        }
+      }
+      console.log("[contact] response status", res.status);
+      console.log("[contact] response body", data);
 
       if (!res.ok) {
         setSubmitState("error");
-        setErrorMessage(data.error ?? "送出失敗，請稍後再試。");
+        setErrorMessage(data.error ?? data.message ?? "送出失敗，請稍後再試。");
         return;
       }
+      form.reset();
       setSubmitState("success");
-    } catch {
+    } catch (error) {
+      console.error("[contact] submit failed", error);
       setSubmitState("error");
       setErrorMessage("網路錯誤，請稍後再試。");
     }
@@ -113,7 +127,7 @@ export function ContactPageClient() {
             <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
               {submitState === "success" ? (
                 <div className="rounded-xl border border-teal-200 bg-teal-50 p-8 text-center">
-                  <p className="font-medium text-teal-800">已收到您的資訊，我們會盡快與您聯繫。</p>
+                  <p className="font-medium text-teal-800">已收到您的需求，我們會盡快與您聯繫。</p>
                   <a
                     href={LINE_URL}
                     target="_blank"
